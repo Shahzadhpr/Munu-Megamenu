@@ -92,7 +92,7 @@ html {
 }
 
 body {
-    font-family: "YekanBakh", sans-serif;
+    font-family: "YekanBakh Medium", sans-serif;
 	font-size: 1.6rem;
 	color: var(--text-color);
 }
@@ -109,13 +109,18 @@ a {
 
 /* Header */
 .header {
+	padding-top: 1rem;
+    margin-bottom: 4.8rem;
+	background-color: white;
+	position: relative;
+	z-index: 20;
+}
+
+.header > .container {
+	height: 8rem;
 	display: flex;
     align-items: center;
     justify-content: space-between;
-	padding-top: 2.8rem;
-    margin-bottom: 4.8rem;
-	height: 8rem;
-	background-color: white;
 }
 
 .heaser__wrapper {
@@ -132,7 +137,8 @@ a {
 }
 
 .menu__item {
-	transition: all 120ms ease-in;
+	transition: all 150ms ease-in;
+	position: relative;
 }
 
 .menu__link {
@@ -142,7 +148,6 @@ a {
 	gap: .8rem;
 	color: var(--text-color);
 	transition: all .2s ease-in .1s;
-	font-family: "YekanBakh Medium";
 }
 
 .menu__link:hover {
@@ -151,6 +156,41 @@ a {
 
 .menu__link:hover svg {
 	stroke: var(--primery-color);
+}
+
+.menu__item:hover .submenu__wrapper {
+	opacity: 1;
+	visibility: visible;
+}
+
+.submenu__wrapper {
+	position: absolute;
+    right: 0;
+    top: 2.4rem;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 120ms ease-in;
+	background-color: transparent;
+	z-index: 20;
+}
+
+.submenu {
+	margin-top: 2.4rem;
+	background-color: #F4F4F5;
+	height: 28.8rem;
+	width: 44rem;
+	border-top: 1px solid #E1E1E1;
+	border-bottom-left-radius: .8rem;
+	border-bottom-right-radius: .8rem;
+}
+
+.overlay {
+	position: fixed;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.4);
+	z-index: 10;
 }
 
 .cart {
@@ -177,7 +217,7 @@ a {
     background-color: var(--primery-color);
     border-radius: 100%;
     font-size: 1rem;
-	font-family: "YekanBakh Medium";
+	font-family: "YekanBakh Regular";
 	border: 3px solid white;
 	line-height: 1.9rem;
 } 
@@ -191,7 +231,6 @@ a {
     border: 2px solid var(--primery-color);
     border-radius: 1rem;
     padding: 1rem;
-	font-family: "YekanBakh Medium";
 }
 
 /* Main */
