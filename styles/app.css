@@ -169,19 +169,58 @@ a {
     top: 2.4rem;
 	opacity: 0;
 	visibility: hidden;
-	transition: all 120ms ease-in;
+	transition: all 110ms ease-in;
 	background-color: transparent;
 	z-index: 20;
 }
 
 .submenu {
+	position: relative;
 	margin-top: 2.4rem;
-	background-color: #F4F4F5;
+	background-color: #FFFFFF;
 	height: 28.8rem;
 	width: 44rem;
 	border-top: 1px solid #E1E1E1;
 	border-bottom-left-radius: .8rem;
 	border-bottom-right-radius: .8rem;
+}
+
+.submenu__item {
+	display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.59rem 2rem;
+    width: 24rem;
+	height: 4.79rem;
+	background-color: #F4F4F5;
+	transition: all 150ms ease-in;
+}
+
+.submenu__item-wrapper:hover .submenu__item {
+	background-color: #FFFFFF;
+}
+
+.submenu__item > svg {
+	width: 1.5rem;
+	height: 1.5rem;
+}
+
+.submenu__item-body {
+	display: none;
+    flex-direction: column;
+    row-gap: 2.5rem;
+	width: 20rem;
+	padding: 2rem;
+	font-size: 1.4rem;
+	color: #667085;
+	position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.submenu__item-wrapper:hover > .submenu__item-body {
+	display: flex;
 }
 
 .overlay {
@@ -191,6 +230,12 @@ a {
 	height: 100%;
 	background-color: rgba(0, 0, 0, 0.4);
 	z-index: 10;
+	opacity: 0;
+	transition: all 110ms ease-in;
+}
+
+.overlay--show {
+	opacity: 1;
 }
 
 .cart {
