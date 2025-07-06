@@ -9,3 +9,24 @@ menuItem.addEventListener("mouseover", function (){
 menuItem.addEventListener("mouseout", function (){
     overlay.classList.remove("overlay--show")
 })
+
+
+// Overlay-cart
+let header = document.querySelector(".header");
+let cartBtn = document.querySelector(".cart__btn");
+let cartBody = document.querySelector(".cart__body");
+let overlayCart = document.querySelector(".overlay-cart");
+
+cartBtn.addEventListener("click", function (){
+    cartBody.classList.add("cart__body--active");
+    overlayCart.classList.add("overlay--show");
+    header.style.zIndex = "auto";
+})
+
+overlayCart.addEventListener("click", function (){
+    cartBody.classList.remove("cart__body--active");
+    overlayCart.classList.remove("overlay--show");
+    setTimeout(function (){
+        header.style.zIndex = "20";
+    },100)
+})
