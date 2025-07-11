@@ -11,6 +11,25 @@ menuItem.addEventListener("mouseout", function (){
 })
 
 
+//product-item
+document.querySelectorAll('.submenu__item-wrapper').forEach(item => {
+    item.addEventListener('mouseenter', function() {
+        document.querySelectorAll('.submenu__item-body').forEach(body => {
+            body.style.display = 'none';
+        });
+        
+        this.querySelector('.submenu__item-body').style.display = 'flex';
+    });
+});
+
+document.querySelector('.submenu').addEventListener('mouseleave', function() {
+    document.querySelectorAll('.submenu__item-body').forEach(body => {
+        body.style.display = 'none';
+    });
+    document.querySelector('.submenu__item-wrapper:first-child .submenu__item-body').style.display = 'flex';
+});
+
+
 // Overlay-cart
 let header = document.querySelector(".header");
 let cartBtn = document.querySelector(".cart__btn");
