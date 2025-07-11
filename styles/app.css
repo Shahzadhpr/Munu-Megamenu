@@ -339,6 +339,7 @@ a {
 	align-items: center;
 	column-gap: .4rem;
 	color: var(--text-color);
+	position: relative;
 }
 
 .product__info {
@@ -433,8 +434,9 @@ a {
     gap: .8rem;
     color: white;
     background-color: var(--primery-color);
-    padding: 1.2rem 8rem;
+    padding: 1.2rem 6rem;
     border-radius: 1rem;
+	margin-top: 2rem;
 }
 
 .header__link {
@@ -446,6 +448,67 @@ a {
     border: 2px solid var(--primery-color);
     border-radius: 1rem;
     padding: 1rem;
+}
+
+.mobile-cart {
+	display: none;
+	width: 28rem;
+	background-color: white;
+	padding: 2.1rem;
+	position: fixed;
+    left: -28rem;
+    top: 0;
+    bottom: 0;
+	z-index: 20;
+	flex-direction: column;
+	transition: all 130ms ease-in;
+}
+
+.mobile-cart--open {
+	left: 0;
+}
+
+.mobile-cart__header {
+	display: flex;
+    align-items: center;
+    justify-content: space-between;
+	border-bottom: 1px solid #E5E7EB;
+	padding-bottom: 2rem;
+	margin-bottom: 2rem;
+}
+
+.mobile-cart__title {
+    font-family: "YekanBakh Bold";
+}
+
+.mobile-cart__close-btn {
+	background-color: inherit;
+    border: none;
+    outline: none;
+	cursor: pointer;
+}
+
+.mobile-cart__close-btn svg {
+	width: 2rem;
+	height: 2rem;
+}
+
+.mobile-cart__body {
+	display: flex;
+	flex-direction: column;
+	row-gap: 1.6rem;
+}
+
+.mobile-cart__remove {
+	position: absolute;
+    top: -5px;
+    right: -5px;
+	width: 2rem;
+	height: 2rem;
+}
+
+.mobile-cart__footer {
+	margin-top: auto;
 }
 
 /* Main */
@@ -567,6 +630,7 @@ a {
 	.header {
 		border-bottom: 1px solid #E1E1E1;
 		margin-bottom: 3.4rem;
+		z-index: auto;
 	}
 
 	.header > .container {
@@ -577,4 +641,7 @@ a {
 		display: block;
 	}
 
+	.mobile-cart {
+		display: flex;
+	}
 }
