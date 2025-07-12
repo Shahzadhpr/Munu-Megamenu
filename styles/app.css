@@ -511,6 +511,109 @@ a {
 	margin-top: auto;
 }
 
+.nav__menu {
+	display: none;
+	width: 25.6rem;
+	background-color: white;
+	padding: 2.1rem;
+	position: fixed;
+    right: -25.6rem;
+    top: 0;
+    bottom: 0;  
+	z-index: 20;
+	flex-direction: column;
+	transition: all 130ms ease-in;
+}
+
+.nav__menu--open {
+	right: 0;
+}
+
+.nav-menu__header{
+	display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #E5E7EB;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+}
+
+.nav-menu__close-btn{
+    background-color: inherit;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.nav-menu__close-btn svg {
+	width: 2rem;
+	height: 2rem;
+}
+
+.nav__menu__link {
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    background-color: white;
+    color: var(--primery-color);
+    border: 1px solid var(--primery-color);
+    border-radius: 1rem;
+	padding: 1.2rem;
+	width: 100%;
+	margin-top: auto;
+}
+
+.nav-menu__link {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.nav-menu__sub-icon {
+	width: 1.6rem;
+	transform: rotate(180deg);
+}
+
+.nav-menu__sub-icon--open {
+	transform: rotate(0deg);
+}
+
+.nav-menu__submenu {
+	display: none;
+    flex-direction: column;
+    row-gap: 1rem;
+    font-size: 1.4rem;
+    font-family: "YekanBakh Regular";
+	color: #667085;
+	margin-bottom: 1.2rem;
+	padding-right: 2.8rem;
+	transition: all 130ms ease-in;
+}
+
+.nav-menu__submenu--open {
+	display: flex;
+}
+
+.nav-menu__items {
+	display: flex;
+	flex-direction: column;
+	row-gap: 2rem;
+}
+
+.nav-menu__item {
+	display: flex;
+	align-items: center;
+	gap: .8rem;
+	font-family: "YekanBakh Regular";
+}
+
+.nav-menu__item svg {
+	width: 2rem;
+	height: 2rem;
+}
+
+
 /* Main */
 .main {
 	width: 100%;
@@ -602,6 +705,24 @@ a {
 	color: var(--primery-color);
 }
 
+.overlay-nav {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 15;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 110ms ease-in;
+    clip-path: polygon(0 0, calc(100% - 25.6rem) 0, calc(100% - 25.6rem) 100%, 0 100%);
+}
+.overlay-nav--show {
+    opacity: 1;
+    visibility: visible;
+}
+
 /* Responsive */
 @media screen and (max-width: 768px) {
 	.heaser__wrapper--right,
@@ -641,7 +762,8 @@ a {
 		display: block;
 	}
 
-	.mobile-cart {
+	.mobile-cart,
+	.nav__menu {
 		display: flex;
 	}
 }

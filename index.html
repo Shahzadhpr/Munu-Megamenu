@@ -38,8 +38,8 @@
             <path opacity="0.4" d="M16.2197 8.2998V12.6998" stroke="#1D2939" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
         </symbol>
         <symbol id="arrow-left" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M9.57 5.92969L3.5 11.9997L9.57 18.0697" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-            <path opacity="0.4" d="M20.4999 12H3.66992" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M9.57 5.92969L3.5 11.9997L9.57 18.0697" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path opacity="0.4" d="M20.4999 12H3.66992" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
         </symbol>
         <symbol id="menu" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M3 7H21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
@@ -425,6 +425,69 @@
                 </svg>
             </div>
 
+            <div class="nav__menu">
+                <div class="nav-menu__header">
+                    <img src="images/logo.png" alt="logo" loading="lazy">
+                    <button class="nav-menu__close-btn">
+                        <svg>
+                            <use href="#close-circle"></use>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="nav-menu__items">
+                    <a href="#" class="nav-menu__item">
+                        <svg>
+                            <use href="#home"></use>
+                        </svg>
+                        صفحه اصلی
+                    </a>
+
+                    <div class="nav-menu__link">
+                        <a href="#" class="nav-menu__item">
+                            <svg>
+                                <use href="#box"></use>
+                            </svg>
+                            محصولات
+                        </a>
+                        <svg class="nav-menu__sub-icon">
+                            <use href="#arrow-down"></use>
+                        </svg>
+                    </div>
+
+                    <div class="nav-menu__submenu">
+                        <a href="#">کفش مردانه</a>
+                        <a href="#">لباس های مردانه</a>
+                        <a href="#">کفش زنانه</a>
+                        <a href="#">پالتو، بارانی و کاپشن مردانه</a>
+                        <a href="#">کیف مردانه</a>
+                        <a href="#">اکسسوری زنانه</a>
+                        <a href="#"> دمپایی مردانه</a>
+                    </div>
+
+                    <a href="#" class="nav-menu__item">
+                        <svg>
+                            <use href="#blogger"></use>
+                        </svg>
+                        مقالات
+                    </a>
+                    
+                    <a href="#" class="nav-menu__item">
+                        <svg>
+                            <use href="#call-calling"></use>
+                        </svg>
+                        تماس با ما
+                    </a>
+                </div>
+
+                <a type="submit" class="nav__menu__link">
+                    ورود | عضویت
+                    <svg>
+                        <use href="#arrow-left"></use>
+                    </svg>
+                </a>
+            </div>
+
             <div class="nav__links nav__links--right">
                 <a href="#" class="nav__link">
                     <svg>
@@ -464,7 +527,7 @@
 
     <div class="overlay"></div>
     <div class="overlay-cart"></div>
-
+    <div class="overlay-nav"></div> <!-- اضافه کردن overlay مخصوص منو -->
 
     <script src="scripts/script.js"></script>
 </body>
