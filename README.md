@@ -48,8 +48,8 @@ A fully responsive mega menu solution for e-commerce and corporate websites, bui
 1. **Clone the project**:
 
    ```bash
-   git clone https://github.com/Shahzadhpr/Munu-Megamenu.git
-   cd Munu-Megamenu
+   git clone https://github.com/Shahzadhpr/Menu-Megamenu.git
+   cd Menu-Megamenu
 
 2. **Install fonts**:
 
