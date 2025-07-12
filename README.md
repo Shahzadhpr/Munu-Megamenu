@@ -63,6 +63,14 @@ A fully responsive mega menu solution for e-commerce and corporate websites, bui
 
   <br>
 
+## 📝 License
+
+This project is licensed under the **MIT License**.  
+See the [LICENSE](./LICENSE) file for full details.  
+
+
+  <br>
+
 ## 📬 Contact Me
 
 Feel free to reach out through any of the following platforms :
