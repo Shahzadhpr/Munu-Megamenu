@@ -15,9 +15,9 @@ A fully responsive mega menu solution for e-commerce and corporate websites, bui
 ### 📱 **Mobile View**
 
 <p align="center">
-  <img src="images/desktop-mobile-view/mobile-view-3.png" width="300"/>
-  <img src="images/desktop-mobile-view/mobile-view-1.png" width="300"/>
-  <img src="images/desktop-mobile-view/mobile-view-2.png" width="300"/>
+  <img src="images/desktop-mobile-view/mobile-view-3.png" width="200"/>
+  <img src="images/desktop-mobile-view/mobile-view-1.png" width="200"/>
+  <img src="images/desktop-mobile-view/mobile-view-2.png" width="200"/>
 </p>
 
 <br>
